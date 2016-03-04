@@ -1,6 +1,13 @@
 function start (){
   console.log('Request Handler "start" was called.');
+  function sleep(milliSecond){
+    var startTime = new Date().getTime();
+    while (new Date().getTime() < startTime + milliSecond);
+  }
+
+  sleep(1000);
   return 'Hello Start'
+
 };
 
 function upload (){
