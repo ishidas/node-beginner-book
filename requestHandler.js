@@ -21,10 +21,10 @@ function start (response){
     response.end();
 };
 
-function upload (){
+function upload (response, postData){
   console.log('Request Handler "upload" was called.');
-  response.writeaHead(200, {'Content-Type': 'text/plain'});
-  response.write('Hello Upload');
+  response.writeHead(200, {'Content-Type': 'text/plain'});
+  response.write('You\'ve sent: ' + postData);
   response.end();
 };
 
